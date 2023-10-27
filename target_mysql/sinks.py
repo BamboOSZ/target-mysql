@@ -344,11 +344,15 @@ class MySQLConnector(SQLConnector):
                 )
             )
 
-#        if primary_keys:
-#            pk_constraint = PrimaryKeyConstraint(*primary_keys, name=f"{table_name}_PK")
-#            _ = sqlalchemy.Table(table_name, meta, *columns, pk_constraint)
-#        else:
-            _ = sqlalchemy.Table(table_name, meta, *columns)
+        raise ValueError(
+            f"blah blah blah"
+        )
+        
+        #if primary_keys:
+        #    pk_constraint = PrimaryKeyConstraint(*primary_keys, name=f"{table_name}_PK")
+        #    _ = sqlalchemy.Table(table_name, meta, *columns, pk_constraint)
+        #else:
+        _ = sqlalchemy.Table(table_name, meta, *columns)
 
         meta.create_all(self._engine)
 
