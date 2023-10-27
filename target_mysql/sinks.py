@@ -343,10 +343,6 @@ class MySQLConnector(SQLConnector):
                     self.to_sql_type(property_jsonschema)
                 )
             )
-
-        raise ValueError(
-            f"blah blah blah"
-        )
         
         #if primary_keys:
         #    pk_constraint = PrimaryKeyConstraint(*primary_keys, name=f"{table_name}_PK")
